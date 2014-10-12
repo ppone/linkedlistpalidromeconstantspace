@@ -83,7 +83,7 @@ func ReverseList(linkedList *Node, endPoint int) *Node {
 
 // }
 
-func IsPalidromeFast(linkedList *Node) bool {
+func IsPalindromeFast(linkedList *Node) bool {
 	// Uses O(1) space and O(n) time
 	// However mutates and destroys list, so need to stitch list backtogether.  Initial implementation StitchListsBackTogether
 	length := linkedList.Length()
@@ -116,7 +116,7 @@ func IsPalidromeFast(linkedList *Node) bool {
 	return true
 }
 
-func IsPalidromeSlow(linkedList *Node) bool {
+func IsPalindromeSlow(linkedList *Node) bool {
 	//Uses O(1) space and O(n^2) time
 	startPalidrome, endPalidrome := linkedList, linkedList
 
@@ -150,26 +150,26 @@ func IsPalidromeSlow(linkedList *Node) bool {
 
 func main() {
 
-	fmt.Println(IsPalidromeSlow(NewLinkedList("ttoott")))
-	fmt.Println(IsPalidromeFast(NewLinkedList("ttoott")))
+	fmt.Println(IsPalindromeSlow(NewLinkedList("ttoott")))
+	fmt.Println(IsPalindromeFast(NewLinkedList("ttoott")))
 	fmt.Println("")
-	fmt.Println(IsPalidromeSlow(NewLinkedList("ttott")))
-	fmt.Println(IsPalidromeFast(NewLinkedList("ttott")))
+	fmt.Println(IsPalindromeSlow(NewLinkedList("ttott")))
+	fmt.Println(IsPalindromeFast(NewLinkedList("ttott")))
 	fmt.Println("")
-	fmt.Println(IsPalidromeSlow(NewLinkedList("hello")))
-	fmt.Println(IsPalidromeFast(NewLinkedList("hello")))
+	fmt.Println(IsPalindromeSlow(NewLinkedList("hello")))
+	fmt.Println(IsPalindromeFast(NewLinkedList("hello")))
 	fmt.Println("")
-	fmt.Println(IsPalidromeSlow(NewLinkedList("ttto")))
-	fmt.Println(IsPalidromeFast(NewLinkedList("ttto")))
+	fmt.Println(IsPalindromeSlow(NewLinkedList("ttto")))
+	fmt.Println(IsPalindromeFast(NewLinkedList("ttto")))
 	fmt.Println("")
-	fmt.Println(IsPalidromeSlow(NewLinkedList("tt")))
-	fmt.Println(IsPalidromeFast(NewLinkedList("tt")))
+	fmt.Println(IsPalindromeSlow(NewLinkedList("tt")))
+	fmt.Println(IsPalindromeFast(NewLinkedList("tt")))
 	fmt.Println("")
-	fmt.Println(IsPalidromeSlow(NewLinkedList("t")))
-	fmt.Println(IsPalidromeFast(NewLinkedList("t")))
+	fmt.Println(IsPalindromeSlow(NewLinkedList("t")))
+	fmt.Println(IsPalindromeFast(NewLinkedList("t")))
 	fmt.Println("")
-	fmt.Println(IsPalidromeSlow(NewLinkedList("tto3tt")))
-	fmt.Println(IsPalidromeFast(NewLinkedList("tto3tt")))
+	fmt.Println(IsPalindromeSlow(NewLinkedList("tto3tt")))
+	fmt.Println(IsPalindromeFast(NewLinkedList("tto3tt")))
 	fmt.Println("")
 
 }
